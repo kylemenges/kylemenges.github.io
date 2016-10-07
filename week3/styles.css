@@ -1,0 +1,24 @@
+.header-default {
+  font-size: 72px;
+}
+
+h1 {
+  text-align:center;
+  font-family: 'Lateef', cursive;
+  color: white;
+  font-size: 56px;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Lateef', cursive;
+  font-size: 36px;
+}
+
+
+body {
+    background-image: url("jpj.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
