@@ -1,0 +1,21 @@
+.navbar-default {
+    background-color:#2E4053;
+    color:#D5F5E3;
+    border-radius:0;
+}
+
+.header-default {
+  font-family: 'Walter Turncoat', cursive;
+}
+
+body {
+    background-image: url("laundromat.jpg");
+    background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'Patrick Hand SC', cursive;
+}
+h2 {
+  font-family: 'Caveat Brush', cursive;
+}
