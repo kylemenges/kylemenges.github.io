@@ -1,0 +1,13 @@
+.thumbnail > img {
+  height: 200px;
+}
+
+h1 {
+  font-size: 64px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Oxygen', sans-serif;
+}
