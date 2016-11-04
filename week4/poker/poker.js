@@ -27,9 +27,17 @@ window.getDeck = function() {
   return cards;
 }
 
-  $("btn btn-success deal").on("click", function(event) {
+$(function() {
+
+  $(".deal").on("click", function(event) {
     event.preventDefault();
-    var elementThatWasClicked = $(this);
-    console.log(elementThatWasClicked);
-    elementThatWasClicked.parent().remove();
-  });
+    var deck = getDeck().shuffle()
+    $("c1").attr("src", "http://golearntocode.com/images/cards/" + deck[0] + ".png")
+    $("c2").attr("src", "http://golearntocode.com/images/cards/" + deck[0] + ".png")
+    $("c3").attr("src", "http://golearntocode.com/images/cards/" + deck[0] + ".png")
+    $("c4").attr("src", "http://golearntocode.com/images/cards/" + deck[0] + ".png")
+    $("c5").attr("src", "http://golearntocode.com/images/cards/" + deck[0] + ".png")
+  }
+  })
+
+})
