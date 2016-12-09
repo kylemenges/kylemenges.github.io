@@ -39,10 +39,20 @@ var Intro = React.createClass({
   }
 })
 
+var dealButton = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1><a href=# className="btn btn-success" onClick{this.deal}>Deal</a></h1>
+        </div>
+    );
+  }
+})
+
 var suit= React.createClass({
   render: function() {
     return (
-      this.suits.shuffle();
+      props.suits.shuffle();
       );
   }
 })
@@ -50,7 +60,7 @@ var suit= React.createClass({
 var rank = React.createClass({
   render: function() {
     return (
-        this.ranks.shuffle();
+        props.ranks.shuffle();
       );
   }
 })
@@ -59,7 +69,7 @@ var Card = React.createClass({
   render: function() {
     return (
       <div className="col-sm-2">
-        <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + {this.props.rank} + "_of_" + {this.props.suit}  ".png"} /></h1>
+        <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + {this.props.rank} + "_of_" + {this.props.suit} + ".png"} /></h1>
       </div>
       );
   }
@@ -69,29 +79,32 @@ var Hand = React.createClass ({
   render: function() {
     return (
         <div className="row">
-          < Card />
-          < Card />
-          < Card />
-          < Card />
-          < Card />
-      </div>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
     );
   }
 })
 
 var App = React.createClass({
     getInitialState: function() {
-      return {Card: getDeck
-      }
+      return {Hand}
     },
-    getDeck: function() {
-        var suit = getDeck.suits
-        var rank = getDeck.rank
+    deal: function() {
+      this.setState ({
+        var deck= window.getDeck().shuffle()
+        var suit = window.getDeck.suits
+        var rank = window.getDeck.rank
+        })
       },
     render: function() {
       return (
         <div>
-          <Hand deal={this.deal}/>
+          <Hand deal={this.state.hand}/>
+          <<dealButton />
         </div>
     );
   }
